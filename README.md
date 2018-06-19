@@ -1,37 +1,28 @@
-Static (serverless) Web App Device Simulator/Monitor for IoTHub 
+# Static (serverless) Web App Device Simulator/Monitor for IoTHub 
 
  
 
-Project Description: 
+## Project Description: 
 
-Copy/Paste in IoTHub Connection String 
-
-Quickly create simulated devices with custom JSON payloads and custom patterns 
-
-Monitor events from iothub 
-
-Completely Served on Blob on CDN 
+- Copy/Paste in IoTHub Connection String 
+- Quickly create simulated devices with custom JSON payloads and custom patterns 
+- Monitor events from iothub 
+- Completely Served on Blob on CDN 
 
  
 
-Overall Goal of Project: 
+## Overall Goal of Project: 
 
-Improve Developer Experience 
-
-Speed up iteration time during hackfests 
-
-Our project can be part of the azure portal 
+- Improve Developer Experience 
+- Speed up iteration time during hackfests 
+- Our project can be part of the azure portal 
 
  
 
-Technologies/Platforms used in Project: 
+## Technologies/Platforms used in Project: 
 
-IotHub 
-
-MQTT 
-
-MQTT.JS 
-
-React 
-
-D3 (for monitoring line chart) 
+- IotHub 
+- MQTT 
+- MQTT.JS 
+- React 
+- D3 (for monitoring line chart) 
