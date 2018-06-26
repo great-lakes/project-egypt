@@ -34,6 +34,7 @@ install:
 script:
   - dpkg -s azcopy 
   - az --version
+  - yarn add jest-enzyme --dev
   - yarn test
   - yarn build
   - azcopy --source $SOURCE_DIR --destination $DESTINATION_PATH --dest-key $AZURE_STORAGE_ACCESS_KEY --recursive --quiet --set-content-type
