@@ -12,7 +12,7 @@ env:
     - CDN_ENDPOINT_NAME="iotgeneratorweb"
     - CDN_PROFILE="iotpage"
     
-install: 
+install:   
   - echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
   - sudo apt-key adv --keyserver packages.microsoft.com --recv-keys 417A0893
   - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list' 
@@ -29,9 +29,11 @@ install:
   - sudo apt-get install azcopy=6.0.0
   - sudo apt-get install apt-transport-https azure-cli
 
+
 #Build and test the website  
 script:
   - dpkg -s azcopy 
+  - az --version
   - yarn test
   - yarn build
   - azcopy --source $SOURCE_DIR --destination $DESTINATION_PATH --dest-key $AZURE_STORAGE_ACCESS_KEY --recursive --quiet --set-content-type
