@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import iothubReducer from '../modules/hubs/iothubcreation.reducer.js'
+import { reducer as hubs } from '../modules/hubs'
+import { reducer as hubCreationForm } from '../modules/hubCreationForm'
 
 export default combineReducers({
-  iothubs: iothubReducer
+  hubs,
+  hubCreationForm
 })

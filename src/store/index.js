@@ -20,6 +20,7 @@ const composedEnhancers = compose(
   ...enhancers
 )
 
+console.log(rootReducer)
 const store = createStore(
   rootReducer,
   initialState,
