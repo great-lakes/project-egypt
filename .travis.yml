@@ -24,10 +24,12 @@ before_install:
   - sudo cp ./azure.list /etc/apt/sources.list.d/
   - sudo apt-get update
   - sudo apt-get install azcopy=7.2.0-netcore
-#Build and test the website  
+
+#Build and test the website 
+before_script:
+   - yarn test
+   - yarn build
 script:
-  - yarn test
-  - yarn build
   - yarn add jest-enzyme --dev
   - azcopy --source $SOURCE_DIR --destination $DESTINATION_PATH --dest-key $AZURE_STORAGE_ACCESS_KEY --recursive --quiet --set-content-type
   - az login --service-principal -u $SP_NAME --password $SP_PASSWORD --tenant $SP_TENANT 
