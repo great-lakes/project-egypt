@@ -23,7 +23,7 @@ before_install:
   - sudo echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod/ trusty main" > azure.list
   - sudo cp ./azure.list /etc/apt/sources.list.d/
   - sudo apt-get update
-  - sudo apt-get install azcopy=7.2.0
+  - sudo apt-get install azcopy=7.2.0-netcore
 #Build and test the website  
 script:
   - yarn test
