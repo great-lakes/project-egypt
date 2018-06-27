@@ -16,7 +16,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "jest-enzyme": "^6.0.2",
     "react-test-renderer": "^16.4.1"
   }
 }
