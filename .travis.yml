@@ -1,11 +1,6 @@
 sudo: required
 dist: trusty
 
-# safelist
-branches:
-  only:
-  - dev
-
 language: node_js
 node_js:
   - "lts/*"
@@ -29,10 +24,18 @@ before_install:
   - sudo cp ./azure.list /etc/apt/sources.list.d/
   - sudo apt-get update
   - sudo apt-get install azcopy=7.2.0-netcore
-#Build and test the website  
+  
+ # only deploy website if we are on the dev branch
+ stages:
+  - name: script
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = dev
+
+#Build and test the website 
+before_script:
+   - yarn test
+   - yarn build
 script:
-  - yarn test
-  - yarn build
   - azcopy --source $SOURCE_DIR --destination $DESTINATION_PATH --dest-key $AZURE_STORAGE_ACCESS_KEY --recursive --quiet --set-content-type
   - az login --service-principal -u $SP_NAME --password $SP_PASSWORD --tenant $SP_TENANT 
   - az cdn endpoint purge -g $CDN_RESOURCE_GROUP -n $CDN_ENDPOINT_NAME --profile-name $CDN_PROFILE --content-paths "/*"
