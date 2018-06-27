@@ -22,7 +22,6 @@ before_install:
   # installing AzCopy=7.2.0 https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2fblobs%2ftoc.json
   - sudo echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod/ trusty main" > azure.list
   - sudo cp ./azure.list /etc/apt/sources.list.d/
-  - apt-key adv --keyserver packages.microsoft.com --recv-keys B02C46DF417A0893
   - sudo apt-get update
   - sudo apt-get install azcopy=7.2.0
 #Build and test the website  
