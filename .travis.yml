@@ -18,8 +18,7 @@ before_install:
   - echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list  
   - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
   - sudo apt-get install apt-transport-https
-  - sudo apt-get update && sudo apt-get install azure-cli=2.0.38
-  - az login --service-principal -u $SP_NAME --password $SP_PASSWORD --tenant $SP_TENANT 
+  - sudo apt-get update && sudo apt-get install azure-cli=2.0.38-1~trusty
   # installing AzCopy=7.2.0 https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2fblobs%2ftoc.json
   - sudo echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod/ trusty main" > azure.list
   - sudo cp ./azure.list /etc/apt/sources.list.d/
