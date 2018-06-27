@@ -1,11 +1,6 @@
 sudo: required
 dist: trusty
 
-# safelist
-branches:
-  only:
-  - dev
-
 language: node_js
 node_js:
   - "lts/*"
