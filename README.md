@@ -25,3 +25,9 @@
 3. clone this repo
 4. run `yarn` to install everything (might take a minute)
 5. run `yarn start` to spin up the development environment
+
+## How To Run Tests
+1. Run `yarn test` to start the testing environment.
+2. Type 'a' to run all tests.
+3. Type 'w' to open the menu.
+4. With the 'w' menu open, type 'q' to quit.
