@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Generators Test</title>
+</head>
+
+<body>
+    <input id="path-input" placeholder="path" />
+    <button id="add-button">Add</button>
+    <script> //The contents between these script tags will be used for reference for adding and testing generators to site
+        var globalGenerators = [];
+        
+        function appendCompleted(generatorObj){
+            console.log("after append");
+            //local storage functionality happens here
+        }
+
+        function testAndAppend(generatorObj) {
+            var s = globalGenerators.find(generator => generator.name === generatorObj.name);
+
+            if (s) { alert("Already exists"); }
+            else { globalGenerators.push(generatorObj); console.log("generator added"); }
+            
+            // synchronous inside .html
+            // TODO: Integration with node will require appendComplete() to be in callback/promise chain
+            appendCompleted(generatorObj);
+        }
+
+        document.querySelector('#add-button').addEventListener('click', function () {
+            const path = document.querySelector('#path-input').value
+            var s = document.createElement("script");
+            s.src = path;
+            console.log("before append");
+            document.body.appendChild(s)
+        })
+
+    </script>
+
+</body>
+
+</html>
