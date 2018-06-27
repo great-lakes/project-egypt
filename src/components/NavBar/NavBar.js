@@ -1,7 +1,7 @@
 import React from 'react'
-import './Header.css'
+import './NavBar.css'
 
-class Header extends React.Component {
+class NavBar extends React.Component {
   constructor (props) {
     super(props)
     this.title = props.title
@@ -16,8 +16,8 @@ class Header extends React.Component {
 
   render () {
     return (
-      <header className='Header-header'>
-        <h1 className='Header-title'>{this.title}</h1>
+      <nav className='NavBar-nav'>
+        <h1 className='NavBar-title'>{this.title}</h1>
         <span>
           <button className='control'>Generators</button>
           <select className='control' value={this.state.value} onChange={this.handleChange}>
@@ -25,9 +25,9 @@ class Header extends React.Component {
           </select>
           <button className='control'>Add Hub</button>
         </span>
-      </header>
+      </nav>
     )
   }
 }
 
-export default Header
+export default NavBar

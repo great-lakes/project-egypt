@@ -1,4 +1,4 @@
-.Header-header {
+.NavBar-nav {
   background-color:rgb(0,120,212);
   height: 50px;
   padding: 5px;
@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.Header-header .control {
+.NavBar-nav .control {
   height: 30px;
   margin: 5px;
   border-radius: 3px;
@@ -20,15 +20,15 @@
   font-weight: 500;
 }
 
-.Header-header span {
+.NavBar-nav span {
   margin-right: 10px;
 }
 
-.Header-header select {
+.NavBar-nav select {
   min-width: 180px;
 }
 
-.Header-title {
+.NavBar-title {
   font-weight: lighter;
   font-size: 20pt;
   margin-left: 10px;
