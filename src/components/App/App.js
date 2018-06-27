@@ -6,7 +6,6 @@ import Home from '../Home'
 import Generators from '../Generators'
 import AddHub from '../AddHub'
 import NotFound from '../NotFound'
-import HubCreation from '../HubCreation'
 
 class App extends Component {
   render () {
@@ -21,7 +20,6 @@ class App extends Component {
             <Route component={NotFound} />
           </Switch>
         </Router>
-        <HubCreation />
       </div>
     )
   }
