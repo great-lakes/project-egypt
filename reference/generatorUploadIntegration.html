@@ -23,10 +23,10 @@
 
             if (s) { alert("Already exists"); }
             else { globalGenerators.push(generatorObj); console.log("generator added"); }
-
+            
+            // synchronous inside .html
+            // TODO: Integration with node will require appendComplete() to be in callback/promise chain
             appendCompleted(generatorObj);
-
-
         }
 
         document.querySelector('#add-button').addEventListener('click', function () {
