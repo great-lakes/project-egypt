@@ -24,6 +24,13 @@ before_install:
   - sudo cp ./azure.list /etc/apt/sources.list.d/
   - sudo apt-get update
   - sudo apt-get install azcopy=7.2.0-netcore
+  
+ # only deploy website if we are on the dev branch
+ stages:
+  - name: script
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = dev
+
 
 #Build and test the website 
 before_script:
