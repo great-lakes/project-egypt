@@ -1,6 +1,9 @@
 sudo: required
 dist: trusty
 
+branches:
+  - dev
+
 language: node_js
 node_js:
   - "lts/*"
@@ -28,6 +31,7 @@ before_install:
 script:
   - yarn test
   - yarn build
+  - yarn add jest-enzyme --dev
   - azcopy --source $SOURCE_DIR --destination $DESTINATION_PATH --dest-key $AZURE_STORAGE_ACCESS_KEY --recursive --quiet --set-content-type
   - az login --service-principal -u $SP_NAME --password $SP_PASSWORD --tenant $SP_TENANT 
   - az cdn endpoint purge -g $CDN_RESOURCE_GROUP -n $CDN_ENDPOINT_NAME --profile-name $CDN_PROFILE --content-paths "/*"
