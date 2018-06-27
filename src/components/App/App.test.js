@@ -1,6 +1,7 @@
 /* global it, expect, describe */
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
+import ShallowRenderer from 'react-test-renderer/shallow'
 import App from './App'
 import sum from './Test.examples' // import Sum from the app test file (Sum is a function)
 
@@ -21,8 +22,14 @@ describe('Example Tests', function () {
 describe('Frontend GUI Tests', function () {
   // This is the included test from stubbed code
   it('renders without crashing', () => {
-    const div = document.createElement('div')
-    ReactDOM.render(<App />, div)
-    ReactDOM.unmountComponentAtNode(div)
+    // const div = document.createElement('div')
+    // ReactDOM.render(<App />, div)
+    // ReactDOM.unmountComponentAtNode(div)
+
+    const renderer = new ShallowRenderer()
+    renderer.render(<App />)
+    const result = renderer.getRenderOutput()
+
+    expect(result.type).toBe('div')
   })
 })
