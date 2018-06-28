@@ -16,7 +16,7 @@ env:
 stages:
   - test
   - name: deploy
-    if: branch = dev
+    if: branch = dev and type = push
 
 jobs: 
   include:
