@@ -1,14 +1,16 @@
-/* global it, describe */
+/* global it, expect, describe */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ShallowRenderer from 'react-test-renderer/shallow'
 import AddHub from './AddHub'
 
 // Tests of the functionality of the GUI implementation
-describe('Frontend GUI Tests', function () {
+describe('Genertators View GUI Tests', function () {
   // This is the included test from stubbed code
   it('renders without crashing', () => {
-    const div = document.createElement('div')
-    ReactDOM.render(<AddHub />, div)
-    ReactDOM.unmountComponentAtNode(div)
+    const renderer = new ShallowRenderer()
+    renderer.render(<AddHub />)
+    const result = renderer.getRenderOutput()
+
+    expect(result.type).toBe('div')
   })
 })
