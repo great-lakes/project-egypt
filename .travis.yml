@@ -4,6 +4,7 @@ dist: trusty
 language: node_js
 node_js:
   - "lts/*"
+cache: yarn
 env:
   global:
     - SOURCE_DIR="build"
