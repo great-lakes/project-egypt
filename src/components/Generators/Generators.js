@@ -2,6 +2,8 @@ import React from 'react'
 import './Generators.css'
 
 import AvailableGenerators from '../AvailableGenerators'
+import GeneratorInfo from '../GeneratorInfo'
+import CustomGenerator from '../CustomGenerator'
 
 class Generators extends React.Component {
   // constructor (props) {
@@ -15,10 +17,10 @@ class Generators extends React.Component {
           <AvailableGenerators />
         </div>
         <div id='addcustomgenerator'>
-          <h1>IM A PLACE HOLDER</h1>
+          <CustomGenerator />
         </div>
         <div id='generatorinfo'>
-          <h1>I TOO AM A PLACE HOLDER</h1>
+          <GeneratorInfo />
         </div>
       </div>
     )

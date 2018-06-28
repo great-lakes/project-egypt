@@ -14,7 +14,6 @@
 #addcustomgenerator {
   text-align: left;
   padding: 15px;
-  background-color: rgb(158, 49, 116);
   grid-column: 1;
   grid-row: 2;
 }
@@ -22,7 +21,6 @@
 #generatorinfo {
   text-align: left;
   padding: 15px;
-  background-color: firebrick;
   grid-column: 2;
   grid-row: 1 / span 2;
 }

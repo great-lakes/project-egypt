@@ -1,6 +1,12 @@
-.AvailableGenerators-title {
+/* .AvailableGenerators-title {
     font-weight: lighter;
     font-size: 15pt;
     margin-left: 10px;
     color: rgb(0,120,212);
+  } */
+
+  .AvailableGenerators-title {
+    font-weight: bold;
+    font-size: 12pt;
+    font-family: "adobe-clean", sans-serif;
   }
