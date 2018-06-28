@@ -6,7 +6,7 @@ class NavBar extends React.Component {
   constructor (props) {
     super(props)
     this.state = {value: ''}
-    this.data = [{key: 0, value: 'coconut'}, {key: 1, value: 'banana'}, {key: 2, value: 'lime'}]
+    this.data = [{key: 0, value: 'no hubs'}]
   }
 
   handleChange (event) {
