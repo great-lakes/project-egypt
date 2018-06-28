@@ -1,3 +1,26 @@
-.Generators {
-  text-align: center;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* can this be auto? */
+  grid-template-rows: 1fr 1fr;
+}
+
+#availablegenerators {
+  text-align: left;
+  padding: 15px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#addcustomgenerator {
+  text-align: left;
+  padding: 15px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#generatorinfo {
+  text-align: left;
+  padding: 15px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
