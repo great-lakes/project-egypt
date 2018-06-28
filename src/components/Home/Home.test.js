@@ -1,7 +1,7 @@
 /* global it, describe */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from './Home'
+import Home from './index'
 
 // Tests of the functionality of the GUI implementation
 describe('Frontend GUI Tests', function () {
