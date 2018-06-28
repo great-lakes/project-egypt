@@ -10,8 +10,10 @@ class AddHub extends React.Component {
 
   render () {
     return (
-      <div>
-        <HubCreation />
+      <div className='grid'>
+        <div id='addahub'>
+          <HubCreation />
+        </div>
       </div>
     )
   }
