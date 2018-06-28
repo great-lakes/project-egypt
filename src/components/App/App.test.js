@@ -2,7 +2,7 @@
 import React from 'react'
 // import ReactDOM from 'react-dom'
 import ShallowRenderer from 'react-test-renderer/shallow'
-import App from './App'
+import App from './index'
 import sum from './Test.examples' // import Sum from the app test file (Sum is a function)
 
 // Example tests that can be used to build off of

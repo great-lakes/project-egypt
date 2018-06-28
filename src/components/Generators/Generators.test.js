@@ -1,7 +1,7 @@
 /* global it, expect, describe */
 import React from 'react'
 import ShallowRenderer from 'react-test-renderer/shallow'
-import Generators from './Generators'
+import Generators from './index'
 
 // Tests of the functionality of the GUI implementation
 describe('Genertators View GUI Tests', function () {
