@@ -15,9 +15,9 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-  /**
-  In mapStateToProps we were mapping the state variables as properties to pass into our presentational component. In mapDispatchToProps we are mapping the action functions to our container to be able to pass it into our presentational component.
-  **/
+/**
+In mapStateToProps we were mapping the state variables as properties to pass into our presentational component. In mapDispatchToProps we are mapping the action functions to our container to be able to pass it into our presentational component.
+**/
 const mapDispatchToProps = (dispatch) => {
   return {
     onHostNameChange: (e) => {
