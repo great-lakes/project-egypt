@@ -6,6 +6,7 @@ import Home from '../Home'
 import Generators from '../Generators'
 import AddHub from '../AddHub'
 import NotFound from '../NotFound'
+import AddDevice from '../AddDevice'
 
 class App extends Component {
   render () {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path='/home' exact component={Home} />
             <Route path='/generators' exact component={Generators} />
             <Route path='/addhub' exact component={AddHub} />
+            <Route path='/adddevice' exact component={AddDevice} />
             <Route component={NotFound} />
           </Switch>
         </Router>
