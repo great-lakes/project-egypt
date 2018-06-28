@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './NavBar.css'
 
 class NavBar extends React.Component {
@@ -9,7 +10,7 @@ class NavBar extends React.Component {
   }
 
   handleChange (event) {
-    this.setState({value: event.target.value})
+    // this.setState({value: event.target.value})
   }
 
   render () {
@@ -17,11 +18,11 @@ class NavBar extends React.Component {
       <nav className='NavBar-nav'>
         <h1 className='NavBar-title'>{this.props.title}</h1>
         <span>
-          <button className='control'>Generators</button>
+          <Link className='control' to='/generators'>Generators</Link>
           <select className='control' value={this.state.value} onChange={this.handleChange}>
             {this.data.map(x => <option key={x.key}>{x.value}</option>)}
           </select>
-          <button className='control'>Add Hub</button>
+          <Link className='control' to='/addhub'>Add Hub</Link>
         </span>
       </nav>
     )

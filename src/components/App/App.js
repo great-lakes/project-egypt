@@ -11,15 +11,16 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
-        <NavBar title='Device Simulator' />
         <Router hashType='noslash'>
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/home' exact component={Home} />
-            <Route path='/generators' exact component={Generators} />
-            <Route path='/addhub' exact component={AddHub} />
-            <Route component={NotFound} />
-          </Switch>
+          <div>
+            <NavBar title='Device Simulator' />
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/generators' exact component={Generators} />
+              <Route path='/addhub' exact component={AddHub} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
         </Router>
       </div>
     )
