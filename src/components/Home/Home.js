@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Home.css'
 
 class Home extends React.Component {
@@ -8,7 +9,10 @@ class Home extends React.Component {
 
   render () {
     return (
-      <p>Hello From HomePage</p>
+      <div className='Home'>
+        <p>Welcome to IotHub/EventHub Simulator</p>
+        <p><Link className='control' to='/addhub'>Add Hub</Link></p>
+      </div>
     )
   }
 }
