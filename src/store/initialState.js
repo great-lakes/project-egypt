@@ -3,7 +3,14 @@ const initialState = {
     hostname: '',
     cs: ''
   },
-  hubs: []
+  hubs: [],
+  deviceCreationForm: {
+    deviceName: '',
+    cs: '',
+    ms: ''
+  },
+  devices: []
+
 }
 
 export default initialState
