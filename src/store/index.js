@@ -1,31 +1,32 @@
+import 'rxjs'
 import { createStore, applyMiddleware, compose } from 'redux'
 import initialState from './initialState'
 import initialDispatch from './initialDispatch'
 import rootReducer from './reducer'
+import { createEpicMiddleware } from 'redux-observable'
+import rootEpic from './epic'
+
+const epicMiddleware = createEpicMiddleware()
 
 const enhancers = []
-const middleware = [
+const middlewares = [
+  epicMiddleware
 ]
 
-if (process.env.NODE_ENV === 'development') {
-  const devToolsExtension = window.devToolsExtension
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-  if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension())
-  }
-}
-
-const composedEnhancers = compose(
-  applyMiddleware(...middleware),
+const composed = composeEnhancers(
+  applyMiddleware(...middlewares),
   ...enhancers
 )
 
-console.log(rootReducer)
 const store = createStore(
   rootReducer,
   initialState,
-  composedEnhancers
+  composed
 )
+
+epicMiddleware.run(rootEpic)
 
 if (process.env.NODE_ENV === 'development') {
   if (module.hot) {
