@@ -1,3 +1,31 @@
 .Home {
   text-align: center;
+  vertical-align: center;
+  font-weight: lighter;
+  font-size: 20pt;
+  margin-left: 10px;
+  color:rgb(0,120,212);
+}
+
+.Home .control {
+  height: 30px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: rgb(0,120,212);
+  color: rgba(255,255,255,0.9);
+  border: none;
+
+  font-size: 20pt;
+}
+
+
+.Home a.control {
+  padding: 5px;
+  text-decoration: none;
+}
+
+
+.Home a.control:active {
+  color: white;
+  background-color: orange;
 }

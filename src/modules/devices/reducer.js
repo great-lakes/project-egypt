@@ -1,8 +1,13 @@
-import { ADD_DEVICE } from './actions'
+import {ADD_DEVICE_CONNECTION} from './actions'
+const initialState = []
 
-export default (state = [], action) => {
+/**
+ * @return array
+ */
+
+export default (state = initialState, action) => {
   switch (action.type) {
-    case ADD_DEVICE:
+    case ADD_DEVICE_CONNECTION:
       return [
         ...state,
         action.payload

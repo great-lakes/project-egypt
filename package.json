@@ -17,10 +17,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "standard && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-test-renderer": "^16.4.1"
+    "react-test-renderer": "^16.4.1",
+    "standard": "^11.0.1"
   }
 }

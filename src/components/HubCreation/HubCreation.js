@@ -1,5 +1,6 @@
 import React from 'react'
 import TextInput from '../TextInput'
+import './HubCreation.css'
 
 function onClickFunc (hostname, cs, onSubmitFromProp) {
   return () => {
@@ -8,11 +9,14 @@ function onClickFunc (hostname, cs, onSubmitFromProp) {
 }
 
 const HubCreation = (props) => (<div>
+  <h1 className='HubCreation-title'>Add a Hub</h1>
   <TextInput
+    labelName='Host Name'
     value={props.hostname}
     onValueChange={props.onHostNameChange}
   />
   <TextInput
+    labelName='Connection String'
     value={props.cs}
     onValueChange={props.onCSChange}
   />

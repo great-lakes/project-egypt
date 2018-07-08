@@ -1,6 +1,8 @@
 import React from 'react'
 import './AddHub.css'
 
+import HubCreation from '../HubCreation'
+
 class AddHub extends React.Component {
   // constructor (props) {
   //   super(props)
@@ -8,7 +10,11 @@ class AddHub extends React.Component {
 
   render () {
     return (
-      <p>Hello From AddHub</p>
+      <div className='grid'>
+        <div id='addahub'>
+          <HubCreation />
+        </div>
+      </div>
     )
   }
 }

@@ -1,3 +1,13 @@
-.AddHub {
-  text-align: center;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* can this be auto? */
+  grid-template-rows: 1fr 1fr;
 }
+
+#addahub {
+  text-align: left;
+  padding: 15px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
