@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Generators Test</title>
+</head>
+
+<body>
+    <input id="path-input" placeholder="path" />
+    <button id="add-button">Add</button>
+    <script> 
+        const ws = new WebSocket(
+             'wss://GabbyHub.azure-devices.net:443/$iothub/websocket?iothub-no-client-cert=true',
+            'mqtt')
+
+ws.binaryType = 'arraybuffer'
+
+ws.onopen = function (event) {
+  console.log('opened!!!', event)
+}
+
+ws.onmessage = function (data) {
+  console.log('message received: ' + data)
+}
+    </script>
+
+</body>
+
+</html>
