@@ -10,6 +10,7 @@
 <body>
     <input id="path-input" placeholder="path" />
     <button id="add-button">Add</button>
+    <script src="https://cdn.com/generatorprototype.js"></script>
     <script> // The contents between these script tags will be used for reference for adding and testing generators to site
         var globalGenerators = [];
         var globalPath = "";
@@ -29,7 +30,7 @@
             console.log(storedNames);
         }
 
-        function __testAndAppend__(generatorObj) {
+        function __testAndAppend__(generatorObj) { // no longer called from template script
             // TODO: verify object shape
 
             var s = globalGenerators.find(generator => generator.name === generatorObj.name);
