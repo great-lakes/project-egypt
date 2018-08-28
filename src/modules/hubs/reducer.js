@@ -1,4 +1,4 @@
-import {ADD_HUB_CONNECTION} from './actions'
+import { ADD_HUB_CONNECTION, SET_HUB_CONNECTIONS } from './actions'
 const initialState = []
 
 /**
@@ -6,12 +6,16 @@ const initialState = []
  */
 
 export default (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_HUB_CONNECTION:
-      return [
-        ...state,
-        action.payload
-      ]
-    default : return state
+  if (action.type === ADD_HUB_CONNECTION) {
+    return [
+      ...state,
+      action.payload
+    ]
   }
+
+  if (action.type === SET_HUB_CONNECTIONS) {
+    return action.payload
+  }
+
+  return state
 }

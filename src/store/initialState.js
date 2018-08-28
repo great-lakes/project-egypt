@@ -1,6 +1,6 @@
 const initialState = {
   hubCreationForm: {
-    hostname: '',
+    name: '',
     cs: ''
   },
   hubs: [],
