@@ -1,15 +1,20 @@
 import 'rxjs'
+import { createHashHistory } from 'history'
 import { createStore, applyMiddleware, compose } from 'redux'
 import initialState from './initialState'
 import initialDispatch from './initialDispatch'
 import rootReducer from './reducer'
 import { createEpicMiddleware } from 'redux-observable'
 import rootEpic from './epic'
+import { connectRouter, routerMiddleware } from 'connected-react-router'
+
+export const history = createHashHistory()
 
 const epicMiddleware = createEpicMiddleware()
 
 const enhancers = []
 const middlewares = [
+  routerMiddleware(history),
   epicMiddleware
 ]
 
@@ -21,7 +26,7 @@ const composed = composeEnhancers(
 )
 
 const store = createStore(
-  rootReducer,
+  connectRouter(history)(rootReducer),
   initialState,
   composed
 )
