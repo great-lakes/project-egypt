@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import './HubCreation.css'
+import { ADD_HUB_CONNECTION_FORM } from '../../../core/forms'
 
 const HubCreationFormComponent = props => {
   const { handleSubmit } = props
@@ -18,7 +18,7 @@ const HubCreationFormComponent = props => {
 }
 
 const HubCreationForm = reduxForm({
-  form: 'createHubConnection'
+  form: ADD_HUB_CONNECTION_FORM
 })(HubCreationFormComponent)
 
 const HubCreation = ({ onSubmitForm }) => (<div>

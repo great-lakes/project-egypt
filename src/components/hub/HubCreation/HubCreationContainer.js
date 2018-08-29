@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   using REDUX stores, it allows us to just access the reducer values
   by going to state.name.
   **/
+  return {}
 }
 
 /**
@@ -17,7 +18,9 @@ In mapStateToProps we were mapping the state variables as properties to pass int
 const mapDispatchToProps = (dispatch) => {
   return {
     onSubmitForm: ({eventhubName, eventhubCs}) => {
-      dispatch(addHubConnection(eventhubName, eventhubCs))
+      const action = addHubConnection(eventhubName, eventhubCs)
+      console.log(action)
+      dispatch(action)
     }
   }
 }

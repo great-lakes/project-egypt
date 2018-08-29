@@ -10,7 +10,7 @@ const DeviceCreationFormComponent = ({ handleSubmit }) => (
     </div>
     <div>
       <label htmlFor='eventFrequency'>Event Frequency</label>
-      <Field name='eventFrequency' component='input' type='text' placeholder='in ms'/>
+      <Field name='eventFrequency' component='input' type='text' placeholder='in ms' />
     </div>
     <div>
       <label htmlFor='deviceCs'>Device Connection String: </label>

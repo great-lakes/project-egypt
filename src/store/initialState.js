@@ -1,16 +1,8 @@
 const initialState = {
-  hubCreationForm: {
-    name: '',
-    cs: ''
-  },
   hubs: [],
-  deviceCreationForm: {
-    deviceName: '',
-    cs: '',
-    ms: ''
-  },
-  devices: []
-
+  devices: [],
+  generators: [],
+  form: null
 }
 
 export default initialState
