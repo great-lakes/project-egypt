@@ -1,10 +1,10 @@
 import React from 'react'
-import './AddHub.css'
-
+import styles from './AddHub.module.css'
 import HubCreation from '../HubCreation'
+import classnames from 'classnames'
 
 export default () => (
-  <div className='grid'>
+  <div className={classnames([styles.grid])}>
     <div id='addahub'>
       <HubCreation />
     </div>

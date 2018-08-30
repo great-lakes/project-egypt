@@ -1,0 +1,7 @@
+{
+  "bypass": {
+    "component": {
+      "useCssModule": "true"
+    }
+  }
+}

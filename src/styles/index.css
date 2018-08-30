@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
+.btn-base {
     @apply font-bold py-2 px-4 rounded;
 }
   
@@ -22,6 +22,10 @@
     @apply bg-grey;
 }
 
+/* components */
+.btn {
+    @apply btn-base btn-blue
+}
 
 /* native elements */
 input {
