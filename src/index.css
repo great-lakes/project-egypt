@@ -6248,7 +6248,7 @@ table {
   z-index: auto;
 }
 
-.btn {
+.btn-base {
   font-weight: 700;
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -6273,6 +6273,19 @@ table {
 
 .btn-grey:hover {
   background-color: #b8c2cc;
+}
+
+/* components */
+
+.btn {
+  font-weight: 700;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: .25rem;
+  background-color: #3490dc;
+  color: #fff;
 }
 
 /* native elements */
