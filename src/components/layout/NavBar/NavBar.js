@@ -15,11 +15,11 @@ class NavBar extends React.Component {
       <nav className='NavBar-nav'>
         <h1 className='NavBar-title'>{this.props.title}</h1>
         <span>
-          <Link className='control' to='/generators'>Generators</Link>
+          <Link className='control generator-manage' to='/generators'>Generators</Link>
           <select className='control' value={this.state.value} onChange={this.handleChange}>
             {hubs.map((x, i) => <option key={`${x.name}-${i}`}>{x.name}</option>)}
           </select>
-          <Link className='control' to='/add-hub'>Add Hub</Link>
+          <Link className='control hub-manage' to='/add-hub'>Add Hub</Link>
         </span>
       </nav>
     )
