@@ -11,7 +11,7 @@ class Home extends React.Component {
     return (
       <div className='Home'>
         <p>Welcome to IotHub/EventHub Simulator</p>
-        <p><Link className='control' to='/add-hub'>Add Hub</Link></p>
+        <p><Link className='control hub-manage' to='/add-hub'>Add Hub</Link></p>
       </div>
     )
   }
