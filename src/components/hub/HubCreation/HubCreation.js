@@ -1,4 +1,5 @@
 import React from 'react'
+import './HubCreation.css'
 import { Field, reduxForm } from 'redux-form'
 import { ADD_HUB_CONNECTION_FORM } from '../../../core/forms'
 
